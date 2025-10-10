@@ -54,6 +54,7 @@ def create_submit_files(years, submit_dir, output_dir, sublines, job_name, cmd, 
                 date = str(month).zfill(2)+str(day).zfill(2)
                 if all_data:
                     files = sorted(glob.glob('/data/ana/CosmicRay/IceTop_level3/exp/IC86.*_pass2_v0*/{year}/{date}/Run*/Level3_IC86.*Subrun*.i3.*'.format(year = year, date=date)))
+                    files = [f for f in files if 'IC86.2018_pass2_v02' not in f]
                 else:
                     files = sorted(glob.glob('/data/ana/CosmicRay/IceTop_level3/exp/IC86.*_pass2_v0*/{year}/{date}/Run*0/Level3_IC86.*0_Subrun*.i3.*'.format(year = year, date=date)))
                 if len(files) > 0:
