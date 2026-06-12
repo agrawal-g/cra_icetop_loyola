@@ -1,9 +1,9 @@
-#!/bin/sh /cvmfs/icecube.opensciencegrid.org/py3-v4.1.0/icetray-start
-#METAPROJECT: combo/stable
+#!/bin/sh /cvmfs/icecube.opensciencegrid.org/py3-v4.3.0/icetray-start
+#METAPROJECT: icetray/v1.9.2
 from icecube import icetray, dataclasses, simclasses, dataio, tableio, toprec
 
 from icecube.hdfwriter import I3HDFWriter
-from I3Tray import I3Tray
+from icecube.icetray import I3Tray
 from icecube.icetop_Level3_scripts.functions import count_stations
 
 import sys 
