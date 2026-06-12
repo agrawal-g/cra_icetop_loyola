@@ -71,7 +71,7 @@ def get_array(indir, file, it73c=0):
         See naming conventions above for further clarification
     """
     # Read file
-    f = h5py.File(indir + '/l3_{}.hdf5'.format(file, 'r'))
+    f = h5py.File(indir + '/l3_{}.hdf'.format(file, 'r'))
 
     # Save stations
     s = np.array(f['NStations']['value'])
